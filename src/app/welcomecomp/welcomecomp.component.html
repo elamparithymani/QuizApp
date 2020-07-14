@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+<h3 >Questions with correct answer</h3>
+    <ng-container *ngFor="let qn of quizService.qns;let i=index">
+      <div class="col-lg-6">
+                <span class="card-title">{{i+1}}</span>
+                <p>{{qn.Qn}}</p>
+                <div *ngIf="qn.ImageName!=null">
+                    <img class="center" [src]="quizService.rootUrl+'/Images/'+qn.ImageName" style="width:350px;height:200px">
+                </div>
+            
+
+                <div class="col-lg-6">
+                <ul class="collection">
+                    <ng-container *ngFor="let option of qn.Options;let j = index">
+                        <li *ngIf="option != null" class="collection-item">
+                            {{option}}
+                            <span class="badge" *ngIf="qn.correct==j">
+                                <i class="material-icons green-text">check_circle</i>
+                            </span>
+                            <span class="badge" *ngIf="qn.answer==j && qn.correct!=j">
+                              <i class="material-icons red-text">check_circle</i>
+                          </span>
+                            
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+    </ng-container>
+    </div>
+    </div>
