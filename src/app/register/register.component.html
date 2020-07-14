@@ -1,0 +1,26 @@
+
+
+<div class="wrapper">
+	<div class="container">
+		<h1>Welcome To Test of Knowledge</h1>
+		
+    <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value,Email.value)">
+			<input type="text" placeholder="Username" name="Name" #Name ngModel required>
+			<input type="text" placeholder="Email" name="Email" #Email ngModel required [pattern]="emailPattern">
+			<button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Start Test</button>
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>

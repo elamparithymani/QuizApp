@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
+  <div class="container">
+    
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+        <span class="sr-only">60% Complete</span>
+      </div>
+    </div>
+    <div class="col-lg-6">
+        <span class="card-title">{{quizService.qnProgress+1}}</span>
+        <p>{{quizService.qns[quizService.qnProgress].Qn}}</p>
+        <div *ngIf="quizService.qns[quizService.qnProgress].ImageName!=null">
+          <img class="center" [src]="quizService.rootUrl+'/Images/'+quizService.qns[quizService.qnProgress].ImageName" style="width:350px;height:200px">
+        </div>
+    
+      <div class="col-lg-6">
+        <ul class="collection answer">
+          <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
+            <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
+              {{option}}
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

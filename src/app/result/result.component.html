@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="col s8 offset-s2">
+    <h2 class="header">Count Your Score</h2>
+    
+      
+    <div class="col-lg-6">
+          <h4 >{{quizService.getParticipantName()}}</h4>
+          <h3>{{quizService.correctAnswerCount}}/10</h3>
+          <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
+        </div>
+        <div class="col-lg-6">
+          <button class="btn" (click)="OnSubmit()">Submit</button>
+          <a class="btn-floating btn-large waves-effect waves-light red" (click)="restart()">
+            <i class="material-icons">replay</i>
+          </a>
+        </div>
+      
+    
+    <!-- Qn with correct answer -->
+    
+  </div>
+</div>
