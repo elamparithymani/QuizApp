@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -31,8 +31,30 @@ namespace WebAPI.Controllers
                 return this.Request.CreateResponse(HttpStatusCode.OK, updated);
             }
         }
+    [HttpGet]
+    [Route("api/GetAllScores")]
+    public HttpResponseMessage GetAllScores()
+    {
+      using (QuizDBEntities db = new QuizDBEntities())
+      {
+        var Pt = db.Participants
+            .Select(x => new { ParticipantID = x.ParticipantID, Name = x.Name, Email = x.Email , Score = x.Score })
+            .OrderBy(y => Guid.NewGuid())
+            .Take(10)
+            .ToArray();
+        var updated = Pt.AsEnumerable()
+            .Select(x => new
+            {
+              ParticipantID = x.ParticipantID,
+              Email = x.Email,
+              Name = x.Name,
+              Score = x.Score
+            }).ToList();
+        return this.Request.CreateResponse(HttpStatusCode.OK, updated);
+      }
+    }
 
-        [HttpPost]
+    [HttpPost]
         [Route("api/Answers")]
         public HttpResponseMessage GetAnswers(int[] qIDs) {
             using (QuizDBEntities db = new QuizDBEntities())

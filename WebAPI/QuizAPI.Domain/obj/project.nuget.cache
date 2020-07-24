@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "xUvUvQ51isEv/a9AbHKV6Lu/QxSo/671h7SB+Vkax2qHLKUdlMzMIEl8cuHihPXXNv6vJf+/FGzeYiSH6oIspQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elamparithym\\Downloads\\QuizApp-master (1)\\QuizApp-master\\QuizAPI\\QuizAPI.Domain\\QuizAPI.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elamparithym\\.nuget\\packages\\microsoft.netcore.app\\2.0.0\\microsoft.netcore.app.2.0.0.nupkg.sha512",
+    "C:\\Users\\elamparithym\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.0.0\\microsoft.netcore.dotnetapphost.2.0.0.nupkg.sha512",
+    "C:\\Users\\elamparithym\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.0.0\\microsoft.netcore.dotnethostpolicy.2.0.0.nupkg.sha512",
+    "C:\\Users\\elamparithym\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.0.0\\microsoft.netcore.dotnethostresolver.2.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\elamparithym\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
